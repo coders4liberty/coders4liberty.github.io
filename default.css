@@ -31,7 +31,7 @@ h1, h2, h3 {
 
   .profile-pic-border {
     border-color: gold;
-    border-width: 10px;
+    border-width: 5px;
     border-style: solid;
     border-radius: 50%;
   }
@@ -43,11 +43,11 @@ h1, h2, h3 {
 }
 
  a: hover {
-   color: gold;
+   color: #FDEE00;
 }
 
  button: hover {
-   color: gold;
+   color: #FDEE00;
 }
 
 </style>
