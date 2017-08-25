@@ -37,17 +37,9 @@ h1, h2, h3 {
   }
 
 .btn {
-  background-color: #131313;
-  color: #ffffff;
+  background-color: #FDEE00;
+  color: #00000;
   margin: 4px;
-}
-
- a: hover {
-   color: #FDEE00;
-}
-
- button: hover {
-   color: #FDEE00;
 }
 
 </style>
