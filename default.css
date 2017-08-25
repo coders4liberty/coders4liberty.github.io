@@ -41,4 +41,8 @@ h1, h2, h3 {
   color: #ffffff;
   margin: 4px;
 }
+
+ .btn: hover {
+   color: gold;
+}
 </style>
