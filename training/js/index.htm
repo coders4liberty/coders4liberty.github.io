@@ -1,0 +1,116 @@
+<html>
+<head>
+<link rel="stylesheet" type="text/css" href="../../default.css">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  </head>
+  
+  <body>
+  <div class="container-fluid">
+  <!-- menu -->
+ <div class="row bord">
+   <div class="col-sm-1 bord"></div>
+   <div class="col-sm-11 bord">
+
+
+   
+   <a href="../../#about" class="btn">About</a>
+   
+    <a href="../../#projects" class="btn">Projects</a>
+     
+    <a href="../../#social" class="btn">Social</a>
+     
+    <a href="../../training" class="btn">Training</a>
+   
+    <a href="../../links" class="btn">Links</a>
+      
+   </div>
+   
+
+ </div>
+ 
+  <div id="Main">
+    <div class="row main">
+      <div class="col-md-1"></div>
+      <div class="col-md-10 main">
+      
+      <!--- start -->
+
+<h4>4.0 Introduction</h4>
+We don't believe in reinventing the wheel here at Coders for Liberty. We believe in learning from everyone and everywhere. When we find an excellent coding resource, we will share that with you. Khan Academy is an excellent tool for learning mathematics, science, the humanities, and computer science. JavaScript is an important language to know for developing web apps.
+
+The main reason we include Khan Academy in our training is to introduce you to the collaboration opportunities offered on Khan Academy.  Like Scratch, you can share and remix projects on Khan Academy. You can also help other Khan Academy students by evaluating their projects. You may also want to try Khan Academy's SQL training.
+<h5>4.0.1 Processing.js</h5>
+At Khan Academy, you're actually learning two languages, JavaScript and Processing.js. As you will find out later, you will need to alter you Khan Academy project code if you want to use it in a website. This will be covered in section 4.3.2. You will need to be able to do this to take part of our animated meme project in section 4.4.
+
+Processing.js uses the canvas, which is an important feature of HTML5 and makes Adobe Flash virtually obsolete. The deprecation of Flash demonstrates the importance of open source software and the limitations of proprietary software. Since Flash is proprietary, updates depend on Adobe's willingness to continue to update it. Adobe has decided that it will no longer support Android and does not provide support for certain platforms like Raspberry Pi, which has made it difficult for people to make use of Scratch 2.0 in the past. While people have found work-around to use Flash on those platforms and Flash has been bundled with Raspbian OS to allow people to use Scratch 2.0 on the Raspberry Pi, it would be in your best interest as a coder to learn to use open source development tools to ensure that you can always make use of the tools without being at the mercy of corporate overlords.
+<h4>4.1 Getting Started on Khan Academy</h4>
+<ol>
+	<li>Visit <a href="http://khanacademy.org" target="_blank" rel="noopener noreferrer">khanacademy.org</a></li>
+	<li>Click "Start learning now"</li>
+	<li>Either click "sign in with Facebook," "sign in with Google," or "Sign up with email"</li>
+	<li>Enter your information and click "Sign up"</li>
+	<li>Open your email and click "Finish signing up"</li>
+	<li>Finish signing up.</li>
+	<li>Go to <strong><a href="http://khanacademy.org/coaches" target="_blank" rel="noopener noreferrer">khanacademy.org/coaches</a></strong></li>
+	<li>In the "Add a coach" field, enter the class code <strong><span class="coach-class-code class-code-id">FGB2JA </span></strong><span class="coach-class-code class-code-id">or the code provided by your Code for Liberty mentor. This enables us to see your progress and help you along the way.</span></li>
+	<li>Go to <a href="https://www.khanacademy.org/computing/computer-programming/programming" target="_blank" rel="noopener noreferrer">khanacademy.org/computing/computer-programming/programming</a> and start learning.</li>
+</ol>
+<h4>4.2 Intro to JS: Drawing & Animation</h4>
+<a href="https://www.khanacademy.org/computing/computer-programming/programming" target="_blank" rel="noopener noreferrer">khanacademy.org/computing/computer-programming/programming</a>
+
+This really is a fun way to learn JavaScript. It is all about graphics and animation. You can follow along and watch the teacher code. You can also pause the tutorial and mess with the code yourself. However, the best part is creating projects at the end of each section yourself. The training is also available on <a href="https://www.youtube.com/playlist?list=PLC51FJvpvRvxAdEO8t6mLXt2m0UMxZrnI" target="_blank" rel="noopener noreferrer">YouTube</a> as videos. However,we  recommend that you do the training on Khan Academy's site.
+<h5>4.3.2 Running Your Khan Academy Programs on a Website</h5>
+<a href="http://www.petercollingridge.co.uk/blog/running-khan-academy-programs-your-computer" target="_blank" rel="noopener noreferrer">www.petercollingridge.co.uk/blog/running-khan-academy-programs-your-computer</a>
+
+Follow the directions provided by <a href="http://www.petercollingridge.co.uk/blog/running-khan-academy-programs-your-computer" target="_blank" rel="noopener noreferrer">Peter's website </a>. However, there are some slight modifications I would make based on what I learned from the Mozilla Web Development course. However, these are really just web design preferences. You can just ignore my design tips and just do it Peter's way.
+<ul>
+	<li>Save the <a href="http://processingjs.org/download/" target="_blank" rel="noopener noreferrer">processing.js</a> file to your scripts folder for your website.</li>
+	<li>Create a file called code.js in your scripts folders</li>
+	<li>Open the code.js in a text editor and copy  your Khan Academy code and save it.</li>
+	<li>When you are working on the index.html file, you will need to add "scripts/" to your HTML code:</li>
+</ul>
+<pre class="brush: html line-numbers  language-html"><code class=" language-html"><span class="token tag"><span class="token punctuation"><code class="plain"><</code><code class="keyword">script </code><code class="color1">src</code><code class="plain">=</code><code class="string">"scripts/processing.js"</code><code class="plain">></</code><code class="keyword">script</code><code class="plain">>
+ <code class="plain"><</code><code class="keyword">canvas</code><code class="color1">width</code><code class="plain">=</code><code class="string">"400"<code class="color1">height</code><code class="plain">=</code><code class="string">"400"<code class="color1">data-processing-sources</code><code class="plain">=</code><code class="string">"scripts/code.js"</code><code class="plain">></</code><code class="keyword">canvas</code><code class="plain">></code></code></code></code> </span></span></code></pre>
+Note: This may not work well with some Khan Academy projects. You may need to tweak your project a little. While I did have a bit of trouble porting some Khan Academy projects over, I was able to write a new program using this method and the <a href="http://processingjs.org/reference/" target="_blank" rel="noopener noreferrer">Processing.js reference page</a>. You should be able to do the 4.4 project using this method. You can refer to the <a href="http://processingjs.org/reference/" target="_blank" rel="noopener noreferrer">Processing.js reference page</a> if you get stuck.
+<h4>4.4 Make an Animated Meme</h4>
+Making a meme should be part of any training program. Use shapes you create using JavaScript code to draw the meme and animate it.
+<h5>4.4.1 Add Your Meme to Our Github Project Site</h5>
+<ol>
+	<li>Go to <a href="https://github.com/coders4liberty/js-memes" target="_blank" rel="noopener noreferrer">https://github.com/coders4liberty/js-memes</a></li>
+	<li>Click "Fork" in the upper right hand corner.</li>
+	<li>Name your js script file something unique and upload it.</li>
+	<li>Make a html file that uses the Processing.js file and your js file to play the animated meme. Name it something unique. You can use the <a href="https://github.com/coders4liberty/js-memes/ssdp.html">ssdp.html</a> file as a reference.</li>
+	<li>Make a link to your file in the <a href="https://github.com/coders4liberty/js-memes/index.html">index.html</a> file. You don't have to make a javascript script that makes it randomly change the title of your animation, but you can if you want.</li>
+	<li>Issue a Pull Request</li>
+</ol>
+<a href="http://twibbon.com/Support/coders-for-liberty-level-4" target="_blank" rel="noopener noreferrer">Congratulations, you have finished the level four training!</a>
+<h4>4.5 Help Others Learn</h4>
+Evaluate projects on Khan Academy to help others and brush up on your coding skills. Include suggestions for improvement and words of encouragement.
+<h4></h4>
+<a href="../gs/">Onward to the level 5 training!</a>
+
+<!-- end -->
+        <div class="col-md-1 main"></div>
+      </div></div>
+
+	  <div class="row bord" id="social">
+  <div class="col-sm-1 bord"></div><div class="col-sm-11 bord">
+  
+   <a class="btn" href="https://github.com/coders4liberty" target="_blank">Github</a> 
+    <a class="btn" href="https://scratch.mit.edu/studios/2085103" target="_blank">Scratch</a> 
+  <a class="btn" href="https://gitter.im/punkbass/Coders4Liberty" target="_blank">Gitter</a>
+  
+  <a class="btn" href="http://facebook.com/codersforliberty" target="_blank">Facebook</a> 
+  <a class="btn" href="http://twitter.com/coders4liberty" target="_blank">Twitter</a> 
+  <a class="btn" href="https://www.youtube.com/channel/UCFyiJADfvOzc4bxcGpD6kwQ" target="_blank">YouTube</a> 
+  <a class="btn" href="https://liberty.me/groups/coders-hackers/forum/topic/coders-for-liberty/#post-120675" target="_blank">Liberty.me</a> 
+
+     
+  </div></div></div>
+    
+  
+ 
+  
+  </body>
