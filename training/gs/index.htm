@@ -198,6 +198,7 @@ For the life of me, I could not figure out how to do this the way Google suggest
   }
 }</pre>
 You will want to make a new <a href="http://sheets.google.com" target="_blank" rel="noopener noreferrer">Google Sheet</a> to test this out on. Something like this:
+	      
 <table dir="ltr" border="1" cellspacing="0" cellpadding="0"><colgroup> <col width="158" /> <col width="100" /></colgroup>
 <tbody>
 <tr>
@@ -216,15 +217,15 @@ You will want to make a new <a href="http://sheets.google.com" target="_blank" r
 </table>
 When you first test it out, put in your own email address in both spots. If you have more than one email address, I guess you could use both of em if you want to check them both. If you have more than two email addresses, you'll want to change the count variable to the number of email addresses. Honestly, it might actually be better to use a while loop. That could be your homework, rewrite this with a while loop.
 
-While loop pop quiz:
+	      <a href="https://www.youtube.com/watch?v=nuZB5V9aUPg">While loop pop quiz.</a>
 
-[youtube https://www.youtube.com/watch?v=nuZB5V9aUPg]
+
 
 Go to the top of the page in the address bar and copy the long string of characters and paste it in the script where it says:
 <pre>  targetId = '1fgBuVkM1rk9oZ8tjbwi1UrNFDfElpG2zw2qfj_VJpm8';</pre>
-And change yourName to your name. And you might want to change the body of the message to something with more substance. And if you're using an existing spreadsheet with the email and name in different columns, just change the ecol and ncol variables to the columns in your spreadsheet. That might be easier to do than changing the spreadsheet itself.
+<p>And change yourName to your name. And you might want to change the body of the message to something with more substance. And if you're using an existing spreadsheet with the email and name in different columns, just change the ecol and ncol variables to the columns in your spreadsheet. That might be easier to do than changing the spreadsheet itself.</p>
 
-Note: Normally you would not want to create an array using the <strong>new</strong> command. At least that is what <a href="http://www.w3schools.com/js/js_arrays.asp" target="_blank" rel="noopener noreferrer">w3School</a> says. Normally, you would use brackets like a Python list:
+<p>Note: Normally you would not want to create an array using the <strong>new</strong> command. At least that is what <a href="http://www.w3schools.com/js/js_arrays.asp" target="_blank" rel="noopener noreferrer">w3School</a> says. Normally, you would use brackets like a Python list:</p>
 <pre>var theArrayName = [element1, element2, element3];</pre>
 If you do this:
 <pre>var theArrayName = new Array(2);</pre>
