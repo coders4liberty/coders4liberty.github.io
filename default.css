@@ -42,4 +42,9 @@ h1, h2, h3 {
   margin: 4px;
 }
 
+table {
+  color: white;
+  background-color: #323232;
+}
+
 </style>
