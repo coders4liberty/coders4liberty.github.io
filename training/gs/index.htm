@@ -1,0 +1,261 @@
+<html>
+<head>
+<link rel="stylesheet" type="text/css" href="../../default.css">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  </head>
+  
+  <body>
+  <div class="container-fluid">
+  <!-- menu -->
+ <div class="row bord">
+   <div class="col-sm-1 bord"></div>
+   <div class="col-sm-11 bord">
+
+
+   
+   <a href="../../#about" class="btn">About</a>
+   
+    <a href="../../#projects" class="btn">Projects</a>
+     
+    <a href="../../#social" class="btn">Social</a>
+     
+    <a href="../../training" class="btn">Training</a>
+   
+    <a href="../../links" class="btn">Links</a>
+      
+   </div>
+   
+
+ </div>
+ 
+  <div id="Main">
+    <div class="row main">
+      <div class="col-md-1"></div>
+      <div class="col-md-10 main">
+      
+      <!--- start -->
+
+<h4>5.1 JavaScript Review</h4>
+<a href="http://codecademy.com" target="_blank" rel="noopener noreferrer">codecademy.com</a>
+
+Brush up on your JavaScript skills at <a href="http://codecademy.com/" target="_blank" rel="noopener noreferrer">Codecademy</a>. If you feel comfortable with JavaScript, you can move on to 5.2.
+<h4>5.2 Getting Started on Google Script</h4>
+<a href="http://script.google.com" target="_blank" rel="noopener noreferrer">script.google.com</a>
+<ol>
+	<li>Sign up for a Google account if you need to.</li>
+	<li>Log into Google</li>
+	<li>Open <a href="https://developers.google.com/apps-script/overview" target="_blank" rel="noopener noreferrer">this</a> in one tab if you want <a href="https://developers.google.com/apps-script/overview" target="_blank" rel="noopener noreferrer">an overview of Google Scripts</a>.</li>
+	<li>Open <a href="https://developers.google.com/apps-script/reference/" target="_blank" rel="noopener noreferrer">this</a> in another tab if you want a <a href="https://developers.google.com/apps-script/reference/" target="_blank" rel="noopener noreferrer">reference page with all the Google things</a>.</li>
+	<li>Open <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference" target="_blank" rel="noopener noreferrer">this</a> in another tab if you want a <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference" target="_blank" rel="noopener noreferrer">reference page with all the JavaScript things</a>.</li>
+	<li>Open <a href="https://script.google.com/" target="_blank" rel="noopener noreferrer">the Script editor</a> in another tab.</li>
+	<li>Play around with it. Try some <a href="https://developers.google.com/apps-script/articles#integration" target="_blank" rel="noopener noreferrer">example code</a>.</li>
+</ol>
+<h4>5.3 Make a flyer and email it to yourself</h4>
+<ol>
+	<li>If you haven't, open <a href="https://script.google.com/" target="_blank" rel="noopener noreferrer">the Script editor</a> in a new tab.</li>
+	<li>For more information, open <a href="https://developers.google.com/apps-script/overview#your_first_script" target="_blank" rel="noopener noreferrer">the tutorial</a> in another tab.</li>
+	<li>Copy this into the Script editor:
+<pre>function createAndSendFlyer() {
+ // Create a new Google Doc named 'Coders for Liberty flyer'
+ var doc = DocumentApp.create('Coders for Liberty flyer');
+
+ // Access the body of the document, then add paragraphs.
+ doc.getBody().setFontFamily('Roboto Mono');
+ doc.getBody().appendParagraph('Join us at http://code4liberty.wordpress.com');
+ doc.getBody().setLinkUrl('http://code4liberty.wordpress.com');
+ doc.getBody().appendParagraph('Have you ever wanted to write a program');
+ doc.getBody().appendParagraph('but you thought it was too difficult?');
+ doc.getBody().appendParagraph('Programming is not out of your reach.')
+ doc.getBody().appendParagraph('Programming is like any other skill.');
+ doc.getBody().appendParagraph('It takes practice, persistence,'); 
+ doc.getBody().appendParagraph('and the will to succeed.');
+ doc.getBody().appendParagraph('The question is not if you can write a program');
+ doc.getBody().appendParagraph('but what you want your program to do.');
+ doc.getBody().appendParagraph('The key to programming is creativity
+ doc.getBody().appendParagraph('and imagination.');
+ doc.getBody().appendParagraph('And the persistence to learn');
+ doc.getBody().appendParagraph('the syntax of the languages.');
+ doc.getBody().appendParagraph('Free yourself from the shackles of your own doubts.');
+
+ // Get the URL of the document.
+ var url = doc.getUrl();
+
+ // Get the email address of the active user - that's you.
+ var email = Session.getActiveUser().getEmail();
+
+ // Get the name of the document to use as an email subject line.
+ var subject = doc.getName();
+
+ // Append a new string to the "url" variable to use as an email body.
+ var body = 'Link to your doc: ' + url;
+
+ // Send yourself an email with a link to the document.
+ GmailApp.sendEmail(email, subject, body);
+}</pre>
+</li>
+	<li> Save the file</li>
+	<li>Select "createAn SendFlyer" from the drop down menu.</li>
+	<li>Click the triangle (Run).</li>
+	<li>Make edits to make it better.</li>
+	<li>If you have an upcoming event, add information for your event using the <a href="https://developers.google.com/apps-script/reference/calendar/" target="_blank" rel="noopener noreferrer">CalendarApp</a>.</li>
+</ol>
+<h4>5.3 Form Letter Email</h4>
+While the above example may seem silly. There are occasions where it may make sense to write a program that generates a form letter, flyer, or email. While the following program is obviously a joke, it demonstrates how you can use variables to generate a form letter email. Just please don't be spamming people. That's not nice and reduces your credibility. Only send emails to people you genuinely believe are interested in what you have to say. Otherwise, you're just wasting your time.
+<pre>function majorParty() {
+    // candidate that I support
+    var iSupport = "Kudos";
+    // candidate that I oppose
+    var iOppose = "Kang";
+    // body of email
+
+    // third party candidates
+    var thirdParty = ["A third party candidate", "Another third party candidate"];
+  
+    // names of email recipients
+    var name = ["Cody Liberty", "Cody"]
+    // email addresses of email recipients
+    var email = ["code4liberty@gmail.com", "code4liberty@gmail.com"]
+    
+    // loop through email addresses
+    for (j = 0; j < name.length; j++) {
+    var message = "";
+    message = message.concat("Dear ", name[j], ":\n\n")
+  
+    // cylce through third party candidates
+    for (i = 0; i < thirdParty.length; i++) 
+      {
+      message = message.concat("It does not matter that ", thirdParty[i]);
+      message = message.concat(" is not ", iOppose);
+      message = message.concat("."," ");
+      } // close 3rd party loop
+  
+    message = message.concat("What matters is that ", iSupport);
+    message = message.concat(" is not ", iOppose);
+    message = message.concat("! Therefore you must support ", iSupport);
+    message = message.concat("! ", iSupport);
+    message = message.concat(" is the only one that is not ");
+    message = message.concat(iOppose, " that can win because people like me support ");
+    message = message.concat(iSupport, "! It does not matter how ");
+    message = message.concat(iSupport, " stands on the issues. Let's jump off this cliff together! ");
+    message = message.concat("Who cares what your mom told you when you were a kid! That does not matter now! We cannot allow ", iOppose);
+    message = message.concat(" to win!");
+    message = message.concat("\n\nSincerely,\n", iSupport, " against ", iOppose);
+    message = message.concat("\n\nThis is a joke. No one paid me to do this.");
+    message = message.concat(" I am just practicing my coding skills on stupid");
+    message = message.concat(" political nonsense. Don't vote for anyone! ");
+    message = message.concat("They're all bat excrement crazy!");
+
+ 
+  // Get the email address of the active user - that's you.
+  //var email = Session.getActiveUser().getEmail();
+
+  // Subject line
+  var subject = "We cannot allow ".concat(iOppose, " to win! You must vote for ");
+  subject = subject.concat(iSupport, "!!!");
+
+  // Send yourself an email with a link to the document.
+  GmailApp.sendEmail(email[j], subject, message);
+    } // close loop
+} // close function</pre>
+<h4>5.4 Sending Emails from an Email List on a Spreadsheet</h4>
+For the life of me, I could not figure out how to do this the way Google suggests in their <a href="https://developers.google.com/apps-script/articles/sending_emails" target="_blank" rel="noopener noreferrer">tutorial</a>. If you can get that to work, let me know. Anyway, my solution is as follows.
+<pre>function sendEmails() {
+  // these top four variable are what you may need to change.
+  // string from url and share link
+  targetId = '1fgBuVkM1rk9oZ8tjbwi1UrNFDfElpG2zw2qfj_VJpm8'; 
+  var count = 2; // number of emails;
+  var ecol = 'A'; // column with emails
+  var ncol = 'B'; // column with names
+  var yourName = "Punkbass"; // name of person sending email.
+  
+  // should not need to change these
+  var sheet = SpreadsheetApp.openById(targetId);
+  var emails = new Array(count); // emails
+  var names = new Array(count); 
+  var ecell = '';  // email cell
+  var ncell = ''; // name cell
+  
+  // cycle through cells to get emails and names
+  for (i = 0; i < (count); i++) {
+    ecell = ecol.concat(i+2);
+    ncell = ncol.concat(i+2);
+    emails[i] = sheet.getRange(ecell).getValue();
+    names[i] = sheet.getRange(ncell).getValue();
+    }
+
+  // send the emails
+  for (i=0; i < names.length; i++) {
+    var subject = "Coders for Liberty";
+    // salutations
+    var message = "Dear ".concat(names[i], ":\n\n");
+    // body
+    var message = message.concat("Thank you for joining coders for liberty.");
+    // signature
+    var message = message.concat("\n\nSincerely,\n", yourName);
+    MailApp.sendEmail(emails[i], subject, message);
+  }
+}</pre>
+You will want to make a new <a href="http://sheets.google.com" target="_blank" rel="noopener noreferrer">Google Sheet</a> to test this out on. Something like this:
+<table dir="ltr" border="1" cellspacing="0" cellpadding="0"><colgroup> <col width="158" /> <col width="100" /></colgroup>
+<tbody>
+<tr>
+<td>email address</td>
+<td>name</td>
+</tr>
+<tr>
+<td>you@gmail.com</td>
+<td>Cody</td>
+</tr>
+<tr>
+<td>you@gmail.com</td>
+<td>Sam</td>
+</tr>
+</tbody>
+</table>
+When you first test it out, put in your own email address in both spots. If you have more than one email address, I guess you could use both of em if you want to check them both. If you have more than two email addresses, you'll want to change the count variable to the number of email addresses. Honestly, it might actually be better to use a while loop. That could be your homework, rewrite this with a while loop.
+
+While loop pop quiz:
+
+[youtube https://www.youtube.com/watch?v=nuZB5V9aUPg]
+
+Go to the top of the page in the address bar and copy the long string of characters and paste it in the script where it says:
+<pre>  targetId = '1fgBuVkM1rk9oZ8tjbwi1UrNFDfElpG2zw2qfj_VJpm8';</pre>
+And change yourName to your name. And you might want to change the body of the message to something with more substance. And if you're using an existing spreadsheet with the email and name in different columns, just change the ecol and ncol variables to the columns in your spreadsheet. That might be easier to do than changing the spreadsheet itself.
+
+Note: Normally you would not want to create an array using the <strong>new</strong> command. At least that is what <a href="http://www.w3schools.com/js/js_arrays.asp" target="_blank" rel="noopener noreferrer">w3School</a> says. Normally, you would use brackets like a Python list:
+<pre>var theArrayName = [element1, element2, element3];</pre>
+If you do this:
+<pre>var theArrayName = new Array(2);</pre>
+You make an array with 2 elements. But that's the way I wanted to make my array. I wanted an array with <strong>count</strong> elements. That's the only reason I used <strong>new</strong>. If you decide to use the while loop, I would recommend using the [ ] method and the <strong><a href="http://www.w3schools.com/jsref/jsref_push.asp" target="_blank" rel="noopener noreferrer">.push()</a></strong> method.
+<h4>5.5 Newsletter</h4>
+Your capstone project is to combine what you have learned to create a newsletter and send it out to a mailing list in your spreadsheet. You should personalize this newsletter with information that you pull from your spreadsheet. You can also use dates from the <a href="https://developers.google.com/apps-script/reference/calendar/" target="_blank" rel="noopener noreferrer">CalendarApp</a> even though we didn't cover that because you're awesome like that.
+
+<a href="http://twibbon.com/Support/coders-for-liberty-level-5" target="_blank" rel="noopener noreferrer">Congratulations you have completed the level 5 Coders for Liberty training!</a>
+
+<a href="https://code4liberty.wordpress.com/web/">Onward to level 6!</a>
+
+<!-- end -->
+        <div class="col-md-1 main"></div>
+      </div></div>
+
+	  <div class="row bord" id="social">
+  <div class="col-sm-1 bord"></div><div class="col-sm-11 bord">
+  
+   <a class="btn" href="https://github.com/coders4liberty" target="_blank">Github</a> 
+    <a class="btn" href="https://scratch.mit.edu/studios/2085103" target="_blank">Scratch</a> 
+  <a class="btn" href="https://gitter.im/punkbass/Coders4Liberty" target="_blank">Gitter</a>
+  
+  <a class="btn" href="http://facebook.com/codersforliberty" target="_blank">Facebook</a> 
+  <a class="btn" href="http://twitter.com/coders4liberty" target="_blank">Twitter</a> 
+  <a class="btn" href="https://www.youtube.com/channel/UCFyiJADfvOzc4bxcGpD6kwQ" target="_blank">YouTube</a> 
+  <a class="btn" href="https://liberty.me/groups/coders-hackers/forum/topic/coders-for-liberty/#post-120675" target="_blank">Liberty.me</a> 
+
+     
+  </div></div></div>
+    
+  
+ 
+  
+  </body>
