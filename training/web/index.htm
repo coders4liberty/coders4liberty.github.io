@@ -1,0 +1,119 @@
+<html>
+<head>
+<link rel="stylesheet" type="text/css" href="../../default.css">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  </head>
+  
+  <body>
+  <div class="container-fluid">
+  <!-- menu -->
+ <div class="row bord">
+   <div class="col-sm-1 bord"></div>
+   <div class="col-sm-11 bord">
+
+
+   
+   <a href="../../#about" class="btn">About</a>
+   
+    <a href="../../#projects" class="btn">Projects</a>
+     
+    <a href="../../#social" class="btn">Social</a>
+     
+    <a href="../../training" class="btn">Training</a>
+   
+    <a href="../../links" class="btn">Links</a>
+      
+   </div>
+   
+
+ </div>
+ 
+  <div id="Main">
+    <div class="row main">
+      <div class="col-md-1"></div>
+      <div class="col-md-10 main">
+      
+      <!--- start -->
+
+You are probably wondering why we are doing this out of order. Shouldn't HTML and CSS come before JavaScript? Well, ordinarily. However, we felt that JavaScript was more central to coding skills. We are adding HTML and CSS because after we started doing the Android training, we realized that it would be helpful to know HTML and CSS prior to starting Android Apps due to the amount of XML layout involved. Also, it is a valuable skill to have.
+
+We will be making a web app that is similar to the <a href="https://code4liberty.wordpress.com/scratch/">Scratch</a> app we made earlier called Who's With Me. This app will help voters determine which down ticket candidates they agree with the most.
+<h4>6.0 Documentation and Reference Pages</h4>
+Bookmark the reference page at <a href="http://www.w3schools.com/" target="_blank" rel="noopener noreferrer">W3Schools</a> or <a href="https://developer.mozilla.org/en-US/docs/Web/HTML" target="_blank" rel="noopener noreferrer">Mozilla</a>. Personally, I prefer W3Schools. Also, you may want to look at <a href="https://stackoverflow.com/questions/tagged/html" target="_blank" rel="noopener noreferrer">Stack Over Flow</a> when you get stuck. Honestly, if you Google a question, Stack Over Flow will likely come up.
+<h4>6.1 Web Design is Programming?</h4>
+Initially I thought that web design was not programming. However after watching the following video by ComputerPhile, I realized it actually was programming. Honestly, you can skip this video.
+[youtube https://www.youtube.com/watch?v=-csXdj4WVwA&w=560&h=315]
+<h4>6.2 What's the Point of CSS?</h4>
+If at first you don't see the point of CSS, try making a website with a lot of different pages using only HTML. Now change the formatting on each and every page. It is a pain in the wrist to do. CSS enables you to set the style and formatting for the entire web site. Then if you want to change it for whatever reason (picky clients <em>cough</em>), you can change it quickly and easily. I reckon this is why CSS was developed.
+<h4>6.3 Free Code Camp</h4>
+Go here: <a href="https://www.freecodecamp.com" target="_blank" rel="noopener noreferrer">freecodecamp.com</a>
+
+It starts out pretty slow, but there's a lot of good advice in the beginning sections so make sure you read through it. Do not be afraid to jump around. You can do the JavaScript portion before the HTML/CSS portion if you prefer. The algorithm challenges are not necessarily in order of difficulty.
+
+There's an active community here of coders. The chat rooms are very active, so take their advice and set notifications to only alert you when you are mentioned. You can also join our <a href="https://gitter.im/punkbass/Coders4Liberty" target="_blank" rel="noopener noreferrer">Gitter chatroom.</a>
+<h5 id="6.3.1">6.3.1 Random Liberty Quotes</h5>
+Add more quotes to our JSON based liberty quote randomizer.
+
+Visit <a href="https://codepen.io/punkbass/full/wdLZyP/" target="_blank" rel="noopener noreferrer">https://codepen.io/punkbass/full/wdLZyP/</a> and click <strong>Fork</strong> in the upper right hand corner.
+
+Then add your own quote objects to the quotes array using the given format.  If the author does not have a twitter handle use <em>null </em>for the twitter handle. Include the @ on the twitter handle.
+<pre>{
+"quote" : "your quote",
+"author" : "person who said said quote",
+"twitterHandle" : "@twitter handle of said author."
+}, // no comma on last entry</pre>
+Then click <strong>Change View</strong> and switch it to full. Copy the url and go to bit.ly to get a short url. Then switch back to editor view. Finally, paste the url in the javascript between the quotes where it says:
+<pre>biturl = "your url";</pre>
+Save it and post your link in the comments.
+<h4>6.4 Who's With Me?</h4>
+While isidewith.com is a great resource for Presidential campaigns, it does not have information on down ticket candidates. We will make a front end app for a political quiz using JavaScript.
+<h5>6.5.1 Design It</h5>
+What questions do you want to ask? What is the best way to state the question? Do you want to put it on a left-right spectrum, use the Nolan chart, or use a different scoring system. How will you weigh each question? Will you ask the user to state how important the issue is to them? How do you match the users answers to candidates? Will you need the candidates to complete a survey or can you use stated policy positions?
+<h5>6.5.2 GUI</h5>
+How do you want to format the questions? Do you want to use a form? Do you want each question to appear one at a time or have the user scroll through the questions? How do you want to display the results?
+<h5>6.5.3 Code It</h5>
+<a href="https://github.com/coders4liberty/whoWme" target="_blank" rel="noopener noreferrer">https://github.com/coders4liberty/whoWme</a>
+
+Head over to our <a href="https://github.com/coders4liberty/whoWme" target="_blank" rel="noopener noreferrer">Repository on GitHub</a> and get to work.
+<h6>6.5.3.1 JSON</h6>
+For extra fun, create an array of candidate objects JSON style. Add attributes to your objects for the candidate's name, position they are running for, stances on issues (as a numeric score), experience, and anything else you think would help inform voters.
+<h4>6.6 Other Resources</h4>
+While FreeCodeCamp is definitely going to keep you busy, there is a plethora of other web development resources out there. We also saved a lot of web design YouTube playlists on our <a href="https://www.youtube.com/channel/UCFyiJADfvOzc4bxcGpD6kwQ" target="_blank" rel="noopener noreferrer">YouTube channel</a> as well.
+<h5>6.5.1 Khan Academy</h5>
+If you prefer projects, check out the Khan Academy HTML course. Sign up for the Khan Academy course at <a href="http://khanacademy.org/coaches" target="_blank" rel="noopener noreferrer">khanacademy.org/coaches</a> and enter code <span id="class-code-indicator"><span class="coach-class-code class-code-id">FJEQJ6</span></span>.
+<h5>6.5.2 Udacity</h5>
+If you want a more in depth, design focused, course with videos, go with <a href="https://www.udacity.com/course/intro-to-html-and-css--ud304" target="_blank" rel="noopener noreferrer">Udacity</a>.
+<h5>6.5.3 Codecademy</h5>
+If you want a more interactive experience, take the <a href="https://www.codecademy.com/learn/web" target="_blank" rel="noopener noreferrer">Codecademy</a> course.
+<h5>6.5.4 Suggestions Welcome</h5>
+Or just pick whichever one you like the best based on previous experience. If you find another great resource that you prefer, comment below.
+
+<a href="http://twibbon.com/manage/Manage/Index/coders-for-liberty-level-6" target="_blank" rel="noopener noreferrer">Congratulations, you have completed the level 6 training!</a>
+
+<a href="http://code4liberty.wordpress.com/android">Onward to Level 7!</a>
+
+<!-- end -->
+        <div class="col-md-1 main"></div>
+      </div></div>
+
+	  <div class="row bord" id="social">
+  <div class="col-sm-1 bord"></div><div class="col-sm-11 bord">
+  
+   <a class="btn" href="https://github.com/coders4liberty" target="_blank">Github</a> 
+    <a class="btn" href="https://scratch.mit.edu/studios/2085103" target="_blank">Scratch</a> 
+  <a class="btn" href="https://gitter.im/punkbass/Coders4Liberty" target="_blank">Gitter</a>
+  
+  <a class="btn" href="http://facebook.com/codersforliberty" target="_blank">Facebook</a> 
+  <a class="btn" href="http://twitter.com/coders4liberty" target="_blank">Twitter</a> 
+  <a class="btn" href="https://www.youtube.com/channel/UCFyiJADfvOzc4bxcGpD6kwQ" target="_blank">YouTube</a> 
+  <a class="btn" href="https://liberty.me/groups/coders-hackers/forum/topic/coders-for-liberty/#post-120675" target="_blank">Liberty.me</a> 
+
+     
+  </div></div></div>
+    
+  
+ 
+  
+  </body>
