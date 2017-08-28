@@ -36,6 +36,7 @@
       <div class="col-md-10 main">
       
       <!--- start -->
+	      <h3>Python & Github</h3>
 This training module is a two for one. We welcome you to learn both Python and Github by contributing to our <a href="https://code4liberty.wordpress.com/2016/06/06/minecraft-burning-man-carrying-the-torch-of-a-better-tomorrow/" target="_blank" rel="noopener noreferrer">Minecraft Burning Man</a> project.
 <h4>3.1 Learn about Github on YouTube if You Want</h4>
 You can find tons of videos and full courses about GitHub by organizations such as <a href="https://www.youtube.com/watch?list=PLqGj3iMvMa4LFz8DZ0t-89twnelpT4Ilw&v=1h9_cB9mPT8" target="_blank" rel="noopener noreferrer">Dev Inc</a>., <a href="https://www.youtube.com/watch?list=PLfdtiltiRHWFEbt9V04NrbmksLV4Pdf3j&v=DR7MLaAKcUk" target="_blank" rel="noopener noreferrer">Code Course</a>, and <a href="https://www.youtube.com/watch?list=PLAwxTw4SYaPk8_-6IGxJtD3i2QAu5_s_p&v=Ytux4IOAR_s" target="_blank" rel="noopener noreferrer">Udacity</a> on YouTube if you're interested in background stories, history lessons, and want to know more than you really need to know at this point.
@@ -107,38 +108,38 @@ For example, you can make a tower using the following function:
 <pre><code>## This function takes an (x,y,z) coordinate, a width, a length, and a height
 ## It creates a tower that starts at the coordinate (x,y,z) that is w wide
 ## l long and h high
-def tower((x,y,z),(w,l,h)):  
-  mc.postToChat("Tower") 
+def tower((x,y,z),(w,l,h)): 
+  mc.postToChat("Tower")
 ##floor
-   mc.setBlocks(x, y, z, x+w, y, z+l, block.STONE.id)
- ##ceiling
-   mc.setBlocks(x,y+h-1, z,  x+w, y+h-1, z+l, block.STONE.id)
- ##walls lz
-   mc.setBlocks(x+w, y+1, z,  x+w, y+h, z+l, block.STONE.id) 
+  mc.setBlocks(x, y, z, x+w, y, z+l, block.STONE.id)
+##ceiling
+  mc.setBlocks(x,y+h-1, z,  x+w, y+h-1, z+l, block.STONE.id)
+##walls lz
+  mc.setBlocks(x+w, y+1, z,  x+w, y+h, z+l, block.STONE.id) 
   mc.setBlocks(x,   y+1, z,  x,   y+h, z+l, block.STONE.id)
   ## adds flair
-   for i in range(z, z+l, 2): 
+  for i in range(z, z+l, 2):
     mc.setBlock(x,   y+h+1, i, block.STONE.id)
-     mc.setBlock(x+w, y+h+1, i, block.STONE.id)
- ##walls xw
-   mc.setBlocks(x+w, y+1, z+l,  x,   y+h, z+l, block.STONE.id)
-   mc.setBlocks(x,   y+1, z,    x+w, y+h, z,   block.STONE.id)
+    mc.setBlock(x+w, y+h+1, i, block.STONE.id)
+##walls xw
+  mc.setBlocks(x+w, y+1, z+l,  x,   y+h, z+l, block.STONE.id)
+  mc.setBlocks(x,   y+1, z,    x+w, y+h, z,   block.STONE.id)
   ## adds flair
-   for i in range(x, x+w, 2): 
-    mc.setBlock(i, y+h+1, z,   block.STONE.id) 
+  for i in range(x, x+w, 2):
+    mc.setBlock(i, y+h+1, z,   block.STONE.id)
     mc.setBlock(i, y+h+1, z+l, block.STONE.id)</code></pre>
 You can call a function inside another function to make more complicated things. For example, this castle function calls the tower function to build a castle with four towers:
-<pre>def castle((x, y, z), (w, l, h), (th, tw)): 
+<pre>def castle((x, y, z), (w, l, h), (th, tw)):
  mc.postToChat("Castle!")
-  ##inside castle 
- tower((x, y, z),(w, l, h)) 
- ##outside castle 
+ ##inside castle
+ tower((x, y, z),(w, l, h))
+ ##outside castle
  tower((x - tw, y, z - tw), (w + tw + tw, l + tw + tw, h))
-  ##towers 
- tower((x - tw, y, z - tw), (tw, tw, th)) 
- tower((x + w, y, z + l), (tw, tw, th)) 
+ ##towers
+ tower((x - tw, y, z - tw), (tw, tw, th))
+ tower((x + w, y, z + l), (tw, tw, th))
  tower((x - tw, y, z + l), (tw, tw, th))
-  tower((x + w, y, z - tw), (tw, tw, th))</pre>
+ tower((x + w, y, z - tw), (tw, tw, th))</pre>
 In the off chance that you built your creation in the same spot as someone else, we can move it to a different location without completely rewriting the code. If you use a function, we can just change the parameters of your function call. If you don't use a function, we would have to change each and every line of your code to move it. Hopefully, that won't happen. However, it is a good idea to get in the habit of writing functions. It makes your code more flexible, easier to alter, and adapt. And you can use the functions in other projects.
 <h4>3.6 Pull Request on GitHub</h4>
 When you are done programming your Minecraft Burning Man exhibit, issue a pull request on GitHub by clicking the "New pull request" button. We will review your creation and add it to our repository. <a href="http://twibbon.com/Support/coders-for-liberty-level-3" target="_blank" rel="noopener noreferrer">Congratulations, you have completed the level 3 training!</a>
